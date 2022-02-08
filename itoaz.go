@@ -43,7 +43,7 @@ func Itoaz(num, radix int, alphabet []rune, nozero bool) (az string) {
 	}
 	defer func() {
 		if !nozero && len(digits) == 0 {
-			az = `0`
+			az = string(alphabet[0])
 		} else {
 			az = string(reverse(digits))
 		}
